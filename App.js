@@ -16,7 +16,8 @@ app.use((req,res,next)=>{
     next()
 })
 
-app.use('/api/goals',require('./backend/routes/getRoutes'))
+app.use('/api/goals',require('./backend/routes/goalRoutes'))
+app.use('/api/users',require('./backend/routes/userRoutes'))
 
 app.get('/', (req,res)=>{
     res.status(200).send("Hello from the server side")
